@@ -1,6 +1,10 @@
 <script>
+import TitleSections from './TitleSections.vue';
 export default {
-    name: 'OurValues'
+    name: 'OurValues',
+    components: {
+        TitleSections,
+    }
 }
 </script>
 
@@ -10,10 +14,12 @@ export default {
     </div>
     <div class="jumbo bg_img">
         <div class="container-fluid position-absolute text-light">
-            <div class="text-center">
+            <TitleSections class="text-center" title="OUR VALUES" paragraph='Think Big. Act Bigger.'/>
+            <!-- <div class="text-center">
                 <h3 class="pb-2">OUR VALUES</h3>
-                <div class="pt-4">T<span class="border_top pt-3">hink Big. Act Bigge</span>r.</div>
-            </div>
+                <div class="prova"></div>
+                <div class="pt-4">Think Big. Act Bigger.</div>
+            </div> -->
             <div class="container-fluid text-center pt-5 padding_top px-5"> <!-- info d-flex text-center pt-5 justify-content-center gap-5 --> <!-- info d-flex mx-5 text-center gap-5 padding_top-->
                 <div class="row">
                     <div class="col">
@@ -67,10 +73,12 @@ export default {
     height: 550px;
     object-fit:cover;
 }
-
+/*
 .border_top{
     border-top: 3px solid #fcd66c;
 }
+
+*/
 .learn {
     background-color: #fcd66c;
     a{
