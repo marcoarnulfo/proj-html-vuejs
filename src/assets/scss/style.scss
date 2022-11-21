@@ -1,5 +1,13 @@
 @use '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@use '../../../node_modules/bootstrap-icons/font/bootstrap-icons.scss';
 
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body{
-  background-color: blanchedalmond;
+  //background-color: blanchedalmond;
 }
