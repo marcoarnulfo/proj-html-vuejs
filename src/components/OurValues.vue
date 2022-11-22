@@ -1,9 +1,11 @@
 <script>
-import TitleSections from './TitleSections.vue';
+import TitleSection from './TitleSection.vue';
+import ButtonComponent from './ButtonComponent.vue';
 export default {
     name: 'OurValues',
     components: {
-        TitleSections,
+        TitleSection,
+        ButtonComponent,
     }
 }
 </script>
@@ -14,37 +16,32 @@ export default {
     </div>
     <div class="jumbo bg_img">
         <div class="container-fluid position-absolute text-light">
-            <TitleSections class="text-center" title="OUR VALUES" paragraph='Think Big. Act Bigger.'/>
-            <!-- <div class="text-center">
-                <h3 class="pb-2">OUR VALUES</h3>
-                <div class="prova"></div>
-                <div class="pt-4">Think Big. Act Bigger.</div>
-            </div> -->
+            <TitleSection class="text-center" title="OUR VALUES" paragraph='Think Big. Act Bigger.'/>
             <div class="container-fluid text-center pt-5 padding_top px-5"> <!-- info d-flex text-center pt-5 justify-content-center gap-5 --> <!-- info d-flex mx-5 text-center gap-5 padding_top-->
                 <div class="row">
                     <div class="col">
                         <div><font-awesome-icon class="icons" icon="fa-solid fa-droplet" /></div>
                         <div>Clean Water</div>
                         <p>Nullam convallis, orci in congue aliquet, diam maturis cursus urna, id maximum lectus magna maximus.</p>
-                        <span class="learn px-4 py-2"><a href="#">LEARN MORE</a></span>
+                        <ButtonComponent class="bg_custom" text="LEARN MORE"/>
                     </div>
                     <div class="col">
                         <div><font-awesome-icon class="icons" icon="fa-solid fa-stethoscope" /></div>
                         <div>Vaccinations</div>
                         <p>Nullam convallis, orci in congue aliquet, diam maturis cursus urna, id maximum lectus magna maximus.</p>
-                        <span class="learn px-4 py-2"><a href="#">LEARN MORE</a></span>
+                        <ButtonComponent class="bg_custom" text="LEARN MORE"/>
                     </div>
                     <div class="col">
                         <div><font-awesome-icon class="icons" icon="fa-solid fa-graduation-cap" /></div>
                         <div>Education</div>
                         <p>Nullam convallis, orci in congue aliquet, diam maturis cursus urna, id maximum lectus magna maximus.</p>
-                        <span class="learn px-4 py-2"><a href="#">LEARN MORE</a></span>
+                        <ButtonComponent class="bg_custom" text="LEARN MORE"/>
                     </div>
                     <div class="col">
                         <div><font-awesome-icon class="icons" icon="fa-solid fa-seedling" /></div>
                         <div>Farming</div>
                         <p>Nullam convallis, orci in congue aliquet, diam maturis cursus urna, id maximum lectus magna maximus.</p>
-                        <span class="learn px-4 py-2"><a href="#">LEARN MORE</a></span>
+                        <ButtonComponent class="bg_custom" text="LEARN MORE"/>
                     </div>
                 </div>
             </div>
@@ -55,14 +52,11 @@ export default {
 
 <style lang="scss" scoped>
 
-/*
-.bg_img{
-    background-image: url('../assets/img/home-content-bg-2.jpg');
-    height: 900px;
-    background-repeat: no-repeat;
-    width: 100%;
+.bg_custom{
+    background-color: #fcd66c;
+    border: 4px solid #fcd66c;
 }
-*/
+
 .bg_test{
     background-image: url('../assets/img/home-content-bg-2.jpg');
     height: 200px;
@@ -73,12 +67,7 @@ export default {
     height: 550px;
     object-fit:cover;
 }
-/*
-.border_top{
-    border-top: 3px solid #fcd66c;
-}
 
-*/
 .learn {
     background-color: #fcd66c;
     a{

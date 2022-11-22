@@ -1,6 +1,10 @@
 <script>
+import ButtonComponent from './ButtonComponent.vue';
 export default {
-    name: 'AppHeader'
+    name: 'AppHeader',
+    components: {
+        ButtonComponent,
+    }
 }
 </script>
 
@@ -24,8 +28,8 @@ export default {
             <h1>MAKE A DIFFERENCE</h1>
             <p>As long as poverty, injustice & inequality persist, none of us can truly rest</p>
             <div class="d-flex justify-content-center gap-5">
-                <div class="mission py-1 px-4"><a href="#">OUR MISSION</a></div>
-                <div class="donate_now py-1 px-4"><a href="#">DONATE NOW</a></div>
+                <ButtonComponent text="OUR MISSION"/>
+                <ButtonComponent class="custom_color" text="DONATE NOW"/>
             </div>
 
         </div>
@@ -62,6 +66,9 @@ export default {
 .donate {
     background-color: #fcd66c;
 }
+.custom_color{
+    color: #fcd66c;
+}
 
 .difference {
     margin: 0;
@@ -76,14 +83,9 @@ a{
     text-decoration: none;
     color: white;
 }
-.mission{
-    border: 3px solid white;
-}
+
 .donate_now{
-    border: 3px solid #fcd66c;
-    
-    a{
-        color: #fcd66c;
-    }
+    border: 3px solid;
+    color: #fcd66c;
 }
 </style>

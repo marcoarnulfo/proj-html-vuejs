@@ -1,10 +1,15 @@
 <script>
-//import { store } from '../store';
+import { store } from '../store';
 
 export default {
     name: 'HorizontalCard',
     props:{
         card : Object
+    },
+    data(){
+        return{
+            store
+        }
     },
     methods:{
         getImagePath: function(imgName) {
@@ -43,6 +48,7 @@ export default {
     font-size: 1.5rem;
 }
 .card_right{
+    box-shadow: 0 0 5px gray;
     p{
         font-size: 1rem;
     }

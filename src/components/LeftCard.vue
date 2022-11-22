@@ -13,9 +13,9 @@ export default {
 </script>
 
 <template>
-    <div class="card border">
+    <div class="card card_left">
         <img :src="getImagePath(`${card.img}.jpg`)" class="card-img-top">
-        <div class="card-body">
+        <div class="card-body ">
             <div class="card_title py-3">{{card.title}}</div>
             <p class="card-text">{{card.paragraph}}</p>
         </div>
@@ -23,10 +23,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.card_title {
-    color: #fcd66c;
-    font-size: 1.5rem;
+
+.card_left{
+    box-shadow: 0 0 10px gray;
 }
+
 
 .card_title {
     color: #fcd66c;

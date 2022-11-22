@@ -1,8 +1,49 @@
 import { reactive } from "vue";
 
 export const store = reactive({
+    causes: 1,
     articles : 1,
-    leftCardVisible: [
+    causesImg: [
+        {
+            img: 'avada-charity-fair-trade-featured-400x300'
+        },
+        {
+            img: 'avada-charity-shelter-featured-400x300'
+        },
+        {
+            img: 'avada-charity-farming-featured-400x300'
+        },
+        {
+            img: 'avada-charity-vaccines-featured-400x300'
+        },
+    ],
+    causesImgHidden: [
+        {
+            img: 'avada-charity-fair-trade-featured-400x300'
+        },
+        {
+            img: 'avada-charity-shelter-featured-400x300'
+        },
+        {
+            img: 'avada-charity-farming-featured-400x300'
+        },
+        {
+            img: 'avada-charity-vaccines-featured-400x300'
+        },
+        {
+            img: 'avada-charity-fair-trade-featured-400x300'
+        },
+        {
+            img: 'avada-charity-shelter-featured-400x300'
+        },
+        {
+            img: 'avada-charity-farming-featured-400x300'
+        },
+        {
+            img: 'avada-charity-vaccines-featured-400x300'
+        },
+    ],
+    leftCard: [
         {
             title: 'Understanding community complexities',
             paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prasent ac nibh vestibulum, laoreet ipsum',
@@ -16,7 +57,7 @@ export const store = reactive({
             img: 'photo-1444213007800-cff19e1677ac-600x450'
         }
     ],
-    cardRightVisible: [
+    cardRight: [
         {
             title: 'The human story of uniqueness',
             paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prasent ac nibh vestibulum, laoreet ipsum',
@@ -61,8 +102,11 @@ export const store = reactive({
         },
     ],
     showArticles(){
-        console.log('Funziono');
         this.articles++
         console.log(this.articles);
+    },
+    showCauses(){
+        this.causes++
+        console.log(this.causes);
     }
 })

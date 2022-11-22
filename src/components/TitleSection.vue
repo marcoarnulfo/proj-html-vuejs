@@ -9,15 +9,17 @@ export default {
 </script>
 
 <template>
+
     <div>
         <h3 class="pb-2">{{title}}</h3>
-        <div class="prova"></div>
+        <div class="underline rounded"></div>
         <div class="pt-4">{{paragraph}}</div>
     </div>
+    
 </template>
 
 <style lang="scss" scoped>
-.prova {
+.underline {
     margin: auto;
     background-color: #fcd66c;
     height: 4px;
