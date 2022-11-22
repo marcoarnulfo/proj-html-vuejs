@@ -23,25 +23,25 @@ export default {
             <div class="container-fluid text-center pt-5 padding_top px-5"> <!-- info d-flex text-center pt-5 justify-content-center gap-5 --> <!-- info d-flex mx-5 text-center gap-5 padding_top-->
                 <div class="row">
                     <div class="col">
-                        <div>Immagine</div>
-                        <div>Vaccinations</div>
-                        <p>Nullam convallis, orci in congue aliquet, diam maturis cursus urna, id maximum lectus magna maximus.</p>
-                        <span class="learn px-4 py-2"><a href="#">LEARN MORE</a></span>
-                    </div>
-                    <div class="col">
-                        <div>Immagine</div>
-                        <div>Education</div>
-                        <p>Nullam convallis, orci in congue aliquet, diam maturis cursus urna, id maximum lectus magna maximus.</p>
-                        <span class="learn px-4 py-2"><a href="#">LEARN MORE</a></span>
-                    </div>
-                    <div class="col">
-                        <div>Immagine</div>
+                        <div><font-awesome-icon class="icons" icon="fa-solid fa-droplet" /></div>
                         <div>Clean Water</div>
                         <p>Nullam convallis, orci in congue aliquet, diam maturis cursus urna, id maximum lectus magna maximus.</p>
                         <span class="learn px-4 py-2"><a href="#">LEARN MORE</a></span>
                     </div>
                     <div class="col">
-                        <div>Immagine</div>
+                        <div><font-awesome-icon class="icons" icon="fa-solid fa-stethoscope" /></div>
+                        <div>Vaccinations</div>
+                        <p>Nullam convallis, orci in congue aliquet, diam maturis cursus urna, id maximum lectus magna maximus.</p>
+                        <span class="learn px-4 py-2"><a href="#">LEARN MORE</a></span>
+                    </div>
+                    <div class="col">
+                        <div><font-awesome-icon class="icons" icon="fa-solid fa-graduation-cap" /></div>
+                        <div>Education</div>
+                        <p>Nullam convallis, orci in congue aliquet, diam maturis cursus urna, id maximum lectus magna maximus.</p>
+                        <span class="learn px-4 py-2"><a href="#">LEARN MORE</a></span>
+                    </div>
+                    <div class="col">
+                        <div><font-awesome-icon class="icons" icon="fa-solid fa-seedling" /></div>
                         <div>Farming</div>
                         <p>Nullam convallis, orci in congue aliquet, diam maturis cursus urna, id maximum lectus magna maximus.</p>
                         <span class="learn px-4 py-2"><a href="#">LEARN MORE</a></span>
@@ -94,6 +94,12 @@ export default {
 p{
     line-height: 2em;
     padding-bottom: 0.7rem;
+}
+
+.icons{
+    font-size: 4rem;
+    color: #fcd66c;
+    padding: 1rem;
 }
 
 </style>

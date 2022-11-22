@@ -36,7 +36,7 @@ export default {
             </div>
         </div>
     </div>
-    <div class="bg_causes text-center p-5 mt-5">
+    <div class="bg_causes text-center p-5 my-5">
         <div><a href="#">view all our causes</a></div>
     </div>
 </template>

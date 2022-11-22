@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <main id="site_main">
+    <main>
         <MomentCounts/>
         <OurValues/>
         <RecentCauses/>

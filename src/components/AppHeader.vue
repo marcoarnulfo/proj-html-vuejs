@@ -6,7 +6,7 @@ export default {
 
 <template>
 
-    <header id="site_header" class="position-relative">
+    <header class="position-relative">
         <div class="container-fluid py-5 spacing_x nav_bar d-flex justify-content-between position-absolute">
             <div class="logo text-danger">
                 <img src="../assets/img/avada-charity-logo.png" alt="">

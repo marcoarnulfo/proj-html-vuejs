@@ -21,20 +21,20 @@ export default {
                 </div>
                 <span class="mission px-4 py-2"><a href="#">OUR MISSION</a></span>
             </div>
-            <div class="col-3 p-0 bg_img position-relative">
+            <div class="col-3 p-0 bg_img position-relative"> <!-- TODO aggiustare font delle scritte e le icone-->
                 <div class="stats">
                     <div class="volunteers text-center py-3">
-                        <span>ICONA</span>
+                        <span><font-awesome-icon icon="fa-regular fa-heart" /></span>
                         <span>2032</span>
                         <div>Volunteers worldwide</div>
                     </div>
                     <div class="projects text-center">
-                        <span>ICONA</span>
+                        <span><font-awesome-icon icon="fa-solid fa-globe" /></span>
                         <span>132</span>
                         <div>Active projects</div>
                     </div>
                     <div class="donated text-center py-3">
-                        <span>ICONA</span>
+                        <span><font-awesome-icon icon="fa-solid fa-dollar-sign" /></span>
                         <span>3.8M</span>
                         <div>Donated</div>
                     </div>
