@@ -66,6 +66,7 @@ h1{
     &:hover{
         background-color: $alternativeColor;
         box-shadow: 0 0 10px $grayText;
+        font-weight: bold;
     }
 }
 .donate {
@@ -73,12 +74,14 @@ h1{
     border: 4px solid $alternativeColor;
     &:hover{
         box-shadow: 0 0 5px $alternativeColor;
+        font-weight: bold;
     }
 }
 .custom_color{
     color: $alternativeColor;
     &:hover{
         color: white;
+        font-weight: bold;
     }
 }
 
@@ -96,12 +99,17 @@ h1{
 .donate_now{
     border: 3px solid;
     color: $alternativeColor;
+    &:hover{
+        box-shadow: 0 0 5px $alternativeColor;
+        font-weight: bold;
+    }
 }
 
 .mission{
     &:hover{
         color: $alternativeColor;
-        box-shadow: 0 0 10px $alternativeColor;;
+        box-shadow: 0 0 10px $alternativeColor;
+        font-weight: bold;
     }
 }
 </style>

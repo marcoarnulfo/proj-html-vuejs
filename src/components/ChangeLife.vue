@@ -37,6 +37,7 @@ export default {
     &:hover{
         color: $alternativeColor;
         box-shadow: 0 0 10px $grayText;
+        font-weight: bold;
     }
 }
 

@@ -83,6 +83,7 @@ export default {
     border: 4px solid $alternativeColor;
     &:hover{
         box-shadow: 0 0 5px $alternativeColor;
+        font-weight: bold;
     }
 }
 .underline {
