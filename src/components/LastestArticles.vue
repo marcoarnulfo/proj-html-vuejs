@@ -15,26 +15,22 @@ export default {
         return {
             store
         }
-    },/*
-        methods: {
-            getImagePath: function (imgName) {
-                return new URL(`../assets/img/${imgName}`, import.meta.url).href;
-            }
-        }
-        */
+    },
 }
 </script>
 
 <template>
     <div class="container">
-        <TitleSection class="text-center py-5" title="LATEST ARTICLES"
-            paragraph="Together we make all the difference" />
+        <TitleSection class="blue text-center" title="LATEST ARTICLES"/>
+            <p class="pb-5 pt-4 text-center">Together we make all the difference</p>
         <div class="row">
             <div class="col-6">
+                <!--TODO cambiare colore dei paragrafi dentro i componenti-->
                 <LeftCard v-for="card in store.leftCard" :card="card" />
                 <LeftCard class="mt-4" v-if="store.articles % 2 == 0" v-for="card in store.leftCardHidden" :card="card" />
             </div>
             <div class="col-6">
+                <!--TODO cambiare colore dei paragrafi dentro i componenti-->
                 <HorizontalCard class="margin_bottom" v-for="card in store.cardRight" :card="card" />
                 <HorizontalCard v-if="store.articles % 2 == 0" class="mb-3" v-for="card in store.cardRightHidden" :card="card" />
             </div>
@@ -50,11 +46,17 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+@use '../assets/scss/partials/variables.scss' as *;
+
+.blue{
+    color: $blueText;
+}
 .margin_bottom{
     margin-bottom: 19px;
 }
 .bg_causes {
-    background-color: #ea6864;
+    background-color: $altBg;
     .articles{
         cursor: pointer;
     }
@@ -66,11 +68,11 @@ export default {
 }
 
 .card_title {
-    color: #fcd66c;
+    color: $alternativeColor;
     font-size: 1.5rem;
 }
 
-p {
-    line-height: 1.4em;
+p{
+    color: $grayText;
 }
 </style>

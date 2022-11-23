@@ -1,5 +1,4 @@
 <script>
-// TODO Implementare al click del banner rosso inferiore più immagini, v-model, click, v-if
 import { store } from '../store';
 import TitleSection from './TitleSection.vue';
 import CausesImg from './CausesImg.vue';
@@ -9,8 +8,8 @@ export default {
         TitleSection,
         CausesImg
     },
-    data(){
-        return{
+    data() {
+        return {
             store
         }
     }
@@ -22,15 +21,18 @@ export default {
 <template>
     <div class="container-fluid text-dark">
 
-        <TitleSection class="pt-5 text-center" title='RECENT CAUSES' paragraph='We run project in over 30 countires in 5 continets'/>
+        <TitleSection class="pt-5 text-center blue" title='RECENT CAUSES'
+            paragraph='We run project in over 30 countires in 5 continets' />
+        <p class="text-center pt-4">We run project in over 30 countries in 5 continents</p>
         <!-- <div class="text-center">
             <h3 class="pt-5">RE<span class="border_bot pb-3">CENT CAUS</span>ES</h3>
             <div class="pt-4">We run project in over 30 countires in 5 continets</div>
         </div> -->
         <div class="container-fluid px-5 text-center pt-5 pb-5">
             <div class="row">
-                <CausesImg v-for="card in store.causesImg" :card="card"/>
-                <CausesImg v-if="store.causes % 2 == 0" class="pt-4" v-for="card in store.causesImgHidden" :card="card"/>
+                <CausesImg v-for="card in store.causesImg" :card="card" />
+                <CausesImg v-if="store.causes % 2 == 0" class="pt-4" v-for="card in store.causesImgHidden"
+                    :card="card" />
             </div>
         </div>
     </div>
@@ -40,20 +42,21 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/variables.scss' as *;
 
-/*
-.border_bot {
-    border-bottom: 3px solid #fcd66c;
+.blue {
+    color: $blueText;
 }
-*/
+p{
+    color: $grayText;
+}
+.bg_causes {
+    background-color: $altBg;
 
-.bg_causes{
-    background-color: #ea6864;
-    div{
+    div {
         cursor: pointer;
         color: white;
         font-size: 1.4rem;
     }
 }
-
 </style>

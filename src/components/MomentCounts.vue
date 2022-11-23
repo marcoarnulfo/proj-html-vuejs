@@ -1,9 +1,11 @@
 <script>
 import ButtonComponent from './ButtonComponent.vue';
+import TitleSection from './TitleSection.vue';
 export default {
     name: 'MomentCounts',
     components: {
         ButtonComponent,
+        TitleSection,
     }
 }
 </script>
@@ -13,7 +15,7 @@ export default {
         <div class="row">
             <div class="col-9 bg-light p-5">
                 <div>
-                    <h3 class="pb-2">Every moments counts</h3>
+                    <h3 class="pb-2 blue">Every moments counts</h3>
                     <div class="underline"></div>
                 </div>
                 <div class="pt-5">
@@ -62,12 +64,18 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+@use '../assets/scss/partials/variables.scss' as * ;
+
+.blue{
+    color: $blueText;
+}
 .bg_custom{
-    background-color: #fcd66c;
-    border: 4px solid #fcd66c;
+    background-color: $alternativeColor;
+    border: 4px solid $alternativeColor;
 }
 .underline {
-    background-color: #fcd66c;
+    background-color: $alternativeColor;
     height: 4px;
     width: 100px;
 }
@@ -92,11 +100,11 @@ export default {
 
 p {
     line-height: 2em;
+    color: $grayText;
 }
 
 .mission {
-    background-color: #fcd66c;
-
+    background-color: $alternativeColor;
     a {
         text-decoration: none;
         color: white;

@@ -16,8 +16,9 @@ export default {
     </div>
     <div class="jumbo bg_img">
         <div class="container-fluid position-absolute text-light">
-            <TitleSection class="text-center" title="OUR VALUES" paragraph='Think Big. Act Bigger.'/>
-            <div class="container-fluid text-center pt-5 padding_top px-5"> <!-- info d-flex text-center pt-5 justify-content-center gap-5 --> <!-- info d-flex mx-5 text-center gap-5 padding_top-->
+            <TitleSection class="text-center" title="OUR VALUES"/>
+            <p class="text-center pt-4">Think Big. Act Bigger.</p>
+            <div class="container-fluid text-center pt-5 padding_top px-5">
                 <div class="row">
                     <div class="col">
                         <div><font-awesome-icon class="icons" icon="fa-solid fa-droplet" /></div>
@@ -52,10 +53,14 @@ export default {
 
 <style lang="scss" scoped>
 
+@use '../assets/scss/partials/variables.scss' as *;
+
+
 .bg_custom{
-    background-color: #fcd66c;
-    border: 4px solid #fcd66c;
+    background-color: $alternativeColor;
+    border: 4px solid $alternativeColor;
 }
+
 
 .bg_test{
     background-image: url('../assets/img/home-content-bg-2.jpg');
@@ -69,7 +74,7 @@ export default {
 }
 
 .learn {
-    background-color: #fcd66c;
+    background-color: $alternativeColor;
     a{
         text-decoration: none;
         color: white;
@@ -79,15 +84,19 @@ export default {
 .padding_top{
     padding-top: 10rem;
 }
-
-p{
-    line-height: 2em;
-    padding-bottom: 0.7rem;
+.col{
+    p{
+        color: $alternativeText;
+        font-size: 1rem;
+        padding-top: 1rem;
+        line-height: 2em;   
+        padding-bottom: 0.7rem;
+    }
 }
 
 .icons{
     font-size: 4rem;
-    color: #fcd66c;
+    color: $alternativeColor;
     padding: 1rem;
 }
 

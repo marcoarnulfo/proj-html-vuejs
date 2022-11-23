@@ -24,17 +24,20 @@ export default {
 
 <style lang="scss" scoped>
 
+@use '../assets/scss/partials/variables.scss' as *;
+
 .card_left{
     box-shadow: 0 0 10px gray;
 }
 
 
 .card_title {
-    color: #fcd66c;
+    color: $alternativeColor;
     font-size: 1.5rem;
 }
 
 p {
     line-height: 1.4em;
+    color: $grayText;
 }
 </style>

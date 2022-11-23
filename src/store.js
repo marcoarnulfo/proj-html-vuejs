@@ -101,7 +101,7 @@ export const store = reactive({
             img: 'photo-1460600421604-5e138c208b9c-177x142'
         },
     ],
-    showArticles(){
+    showArticles(){ // TODO cambiare i valori a true e false e nell'evento al click "!this.valore"
         this.articles++
         console.log(this.articles);
     },

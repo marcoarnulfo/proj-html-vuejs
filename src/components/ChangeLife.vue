@@ -13,8 +13,8 @@ export default {
 <template>
     <div class="position-relative text-center">
         <div class="difference">
-            <TitleSection class="text-light " title="CHANGE A LIFE TODAY"
-            paragraph="As long as poverty, injustice & inequality persist, none of us can truly rest. It doesn't take much to change a life, get in touch today and start making the difference." />
+            <TitleSection class="text-light" title="CHANGE A LIFE TODAY"/>
+            <p class="pt-4 text-light">As long as poverty, injustice & inequality persist, none of us can truly rest. It doesn't take much to change a life, get in touch today and start making the difference.</p>
             <div class="pt-5">
                 <ButtonComponent class="withe mx-3 py-2" text="VOLUNTEER"/>
                 <ButtonComponent class="withe mx-3 py-2" text="DONATE NOW"/>
