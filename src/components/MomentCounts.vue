@@ -33,27 +33,26 @@ export default {
                 <ButtonComponent class="bg_custom text-light " text="OUR MISSION"/>
             </div>
             <div class="col-3 p-0 bg_img position-relative">
-                <!-- TODO aggiustare font delle scritte e le icone-->
                 <div class="stats">
-                    <div class="volunteers text-center py-3">
+                    <div class="volunteers text-center py-3 text-light">
                         <span>
-                            <font-awesome-icon icon="fa-regular fa-heart" />
+                            <font-awesome-icon class="icons" icon="fa-regular fa-heart" />
                         </span>
-                        <span>2032</span>
+                        <span class="fs-3">20<span class="alt_number">3</span>2</span>
                         <div>Volunteers worldwide</div>
                     </div>
-                    <div class="projects text-center">
+                    <div class="projects text-center text-light">
                         <span>
-                            <font-awesome-icon icon="fa-solid fa-globe" />
+                            <font-awesome-icon class="icons" icon="fa-solid fa-globe" />
                         </span>
-                        <span>132</span>
+                        <span class="fs-3">1<span class="alt_number">3</span>2</span>
                         <div>Active projects</div>
                     </div>
-                    <div class="donated text-center py-3">
+                    <div class="donated text-center text-light py-3">
                         <span>
-                            <font-awesome-icon icon="fa-solid fa-dollar-sign" />
+                            <font-awesome-icon class="icons" icon="fa-solid fa-dollar-sign" />
                         </span>
-                        <span>3.8M</span>
+                        <span class="fs-3"><span class="alt_number">3</span>.8M</span>
                         <div>Donated</div>
                     </div>
                 </div>
@@ -67,6 +66,16 @@ export default {
 
 @use '../assets/scss/partials/variables.scss' as * ;
 
+.alt_number{
+    position: relative;
+    top: 6px;
+    font-size: 2.3rem;
+}
+.icons{
+    font-size: 1.7rem;
+    color: white;
+    padding-right: 0.4rem;
+}
 .blue{
     color: $blueText;
 }

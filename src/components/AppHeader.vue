@@ -1,9 +1,15 @@
 <script>
+import { store } from '../store';
 import ButtonComponent from './ButtonComponent.vue';
 export default {
     name: 'AppHeader',
     components: {
         ButtonComponent,
+    },
+    data(){
+        return{
+            store
+        }
     }
 }
 </script>
@@ -17,12 +23,7 @@ export default {
             </div>
 
             <div class="links d-flex text-light gap-5 align-items-center">
-                <div><a href="#">HOME</a></div>
-                <div><a href="#">MISSION</a></div>
-                <div><a href="#">CAUSES</a></div>
-                <div><a href="#">JOURNAL</a></div>
-                <ButtonComponent class="donate text-light" text="DONATE"/>
-                <!-- <div class="donate px-4 py-2">DONATE<a href="#"></a></div> -->
+                <ButtonComponent :class="link.text == 'DONATE' ? 'donate' : 'normal_link'" v-for="link in store.links" :text="link.text"/>
             </div>
         </div>
         <div class="difference text-center text-light">
@@ -60,7 +61,9 @@ h1{
 }
 
 
-
+.normal_link{
+    border: 0;
+}
 .donate {
     background-color: $alternativeColor;
     border: 4px solid $alternativeColor;

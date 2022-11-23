@@ -3,6 +3,23 @@ import { reactive } from "vue";
 export const store = reactive({
     causes: false,
     articles: false,
+    links: [
+        {
+            text: 'HOME'
+        },
+        {
+            text: 'MISSION'
+        },
+        {
+            text: 'CAUSES'
+        },
+        {
+            text: 'JOURNAL'
+        },
+        {
+            text: 'DONATE'
+        },
+    ],
     causesImg: [
         {
             img: 'avada-charity-fair-trade-featured-400x300'
