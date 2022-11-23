@@ -25,20 +25,18 @@ export default {
             <p class="pb-5 pt-4 text-center">Together we make all the difference</p>
         <div class="row">
             <div class="col-6">
-                <!--TODO cambiare colore dei paragrafi dentro i componenti-->
                 <LeftCard v-for="card in store.leftCard" :card="card" />
-                <LeftCard class="mt-4" v-if="store.articles % 2 == 0" v-for="card in store.leftCardHidden" :card="card" />
+                <LeftCard class="mt-4" v-if="store.articles" v-for="card in store.leftCardHidden" :card="card" />
             </div>
             <div class="col-6">
-                <!--TODO cambiare colore dei paragrafi dentro i componenti-->
                 <HorizontalCard class="margin_bottom" v-for="card in store.cardRight" :card="card" />
-                <HorizontalCard v-if="store.articles % 2 == 0" class="mb-3" v-for="card in store.cardRightHidden" :card="card" />
+                <HorizontalCard v-if="store.articles" class="mb-3" v-for="card in store.cardRightHidden" :card="card" />
             </div>
         </div>
         <div class="row">
             <div class="col-12">
                 <div class="bg_causes text-center p-3 my-5">
-                    <div @click="store.showArticles()" class="text-light articles">VIEW ALL OUR ARTICLES</div>
+                    <div @click="store.articles = !store.articles" class="text-light articles">VIEW ALL OUR ARTICLES</div>
                 </div>
             </div>
         </div>

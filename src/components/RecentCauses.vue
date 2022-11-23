@@ -31,13 +31,12 @@ export default {
         <div class="container-fluid px-5 text-center pt-5 pb-5">
             <div class="row">
                 <CausesImg v-for="card in store.causesImg" :card="card" />
-                <CausesImg v-if="store.causes % 2 == 0" class="pt-4" v-for="card in store.causesImgHidden"
-                    :card="card" />
+                <CausesImg v-if="store.causes" class="pt-4" v-for="card in store.causesImgHidden" :card="card" />
             </div>
         </div>
     </div>
     <div class="bg_causes text-center p-5 my-5">
-        <div @click="store.showCauses()">view all our causes</div>
+        <div @click="store.causes = !store.causes">view all our causes</div>
     </div>
 </template>
 
