@@ -3,6 +3,46 @@ import { reactive } from "vue";
 export const store = reactive({
     causes: false,
     articles: false,
+    values: [
+        {
+            icons : 'fa-solid fa-droplet',
+            title : 'Clean Water',
+            text : 'Nullam convallis, orci in congue aliquet, diam maturis cursus urna, id maximum lectus magna maximus.',
+        },
+        {
+            icons : 'fa-solid fa-stethoscope',
+            title : 'Vaccinations',
+            text : 'Nullam convallis, orci in congue aliquet, diam maturis cursus urna, id maximum lectus magna maximus.',
+        },
+        {
+            icons : 'fa-solid fa-graduation-cap',
+            title : 'Education',
+            text : 'Nullam convallis, orci in congue aliquet, diam maturis cursus urna, id maximum lectus magna maximus.',
+        },
+        {
+            icons : 'fa-solid fa-seedling',
+            title : 'Farming',
+            text : 'Nullam convallis, orci in congue aliquet, diam maturis cursus urna, id maximum lectus magna maximus.',
+        },
+    ],
+    icons: [
+        {
+            text: 'fa-brands fa-facebook-f',
+            class: 'facebook',
+        },
+        {
+            text: 'fa-brands fa-instagram',
+            class: 'instagram',
+        },
+        {
+            text: 'fa-brands fa-twitter',
+            class: 'twitter',
+        },
+        {
+            text: 'fa-brands fa-youtube',
+            class: 'youtube',
+        },
+    ],
     links: [
         {
             text: 'HOME'

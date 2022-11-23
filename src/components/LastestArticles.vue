@@ -60,16 +60,6 @@ export default {
     }
 }
 
-.border {
-    box-shadow: 0 3px 0px lightgray;
-    margin-bottom: 2rem;
-}
-
-.card_title {
-    color: $alternativeColor;
-    font-size: 1.5rem;
-}
-
 p{
     color: $grayText;
 }

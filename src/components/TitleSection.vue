@@ -3,7 +3,6 @@ export default {
     name: 'TitleSections',
     props: {
         title: String,
-        //paragraph: String,
     }
 }
 </script>
@@ -13,7 +12,6 @@ export default {
     <div>
         <h3 class="pb-2 ">{{title}}</h3>
         <div class="underline rounded"></div>
-        <!-- <div class="pt-4">{{paragraph}}</div> -->
     </div>
     
 </template>

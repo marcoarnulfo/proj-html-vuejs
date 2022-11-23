@@ -12,7 +12,7 @@ export default {
 
 <template>
     <div class="position-relative text-center">
-        <div class="difference">
+        <div class="center_custom">
             <TitleSection class="text-light" title="CHANGE A LIFE TODAY"/>
             <p class="pt-4 text-light">As long as poverty, injustice & inequality persist, none of us can truly rest. It doesn't take much to change a life, get in touch today and start making the difference.</p>
             <div class="pt-5">
@@ -25,6 +25,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/variables.scss' as *;
 .img_slider {
     width: 100%;
     height: 600px;
@@ -33,9 +34,13 @@ export default {
 
 .withe{
     color: white;
+    &:hover{
+        color: $alternativeColor;
+        box-shadow: 0 0 10px $grayText;
+    }
 }
 
-.difference {
+.center_custom {
     margin: 0;
     position: absolute;
     top: 50%;

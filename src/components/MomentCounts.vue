@@ -56,7 +56,6 @@ export default {
                         <div>Donated</div>
                     </div>
                 </div>
-                <!-- <img class="bg_img" src="../assets/img/home-content-bg-1.jpg" alt=""> -->
             </div>
         </div>
     </div>
@@ -82,6 +81,9 @@ export default {
 .bg_custom{
     background-color: $alternativeColor;
     border: 4px solid $alternativeColor;
+    &:hover{
+        box-shadow: 0 0 5px $alternativeColor;
+    }
 }
 .underline {
     background-color: $alternativeColor;
@@ -112,11 +114,4 @@ p {
     color: $grayText;
 }
 
-.mission {
-    background-color: $alternativeColor;
-    a {
-        text-decoration: none;
-        color: white;
-    }
-}
 </style>

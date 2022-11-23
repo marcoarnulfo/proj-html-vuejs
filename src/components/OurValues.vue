@@ -1,4 +1,6 @@
 <script>
+import { store } from '../store';
+import ValuesComponent from './ValuesComponent.vue';
 import TitleSection from './TitleSection.vue';
 import ButtonComponent from './ButtonComponent.vue';
 export default {
@@ -6,13 +8,18 @@ export default {
     components: {
         TitleSection,
         ButtonComponent,
+        ValuesComponent,
+    },
+    data(){
+        return{
+            store
+        }
     }
 }
 </script>
 
 <template>
-    <div class="bg_test">
-        <!-- <img class="img-fluid" src="../assets/img/home-content-bg-2.jpg" alt="">  -->
+    <div class="bg_top">
     </div>
     <div class="jumbo bg_img">
         <div class="container-fluid position-absolute text-light">
@@ -20,30 +27,7 @@ export default {
             <p class="text-center pt-4">Think Big. Act Bigger.</p>
             <div class="container-fluid text-center pt-5 padding_top px-5">
                 <div class="row">
-                    <div class="col">
-                        <div><font-awesome-icon class="icons" icon="fa-solid fa-droplet" /></div>
-                        <div>Clean Water</div>
-                        <p>Nullam convallis, orci in congue aliquet, diam maturis cursus urna, id maximum lectus magna maximus.</p>
-                        <ButtonComponent class="bg_custom" text="LEARN MORE"/>
-                    </div>
-                    <div class="col">
-                        <div><font-awesome-icon class="icons" icon="fa-solid fa-stethoscope" /></div>
-                        <div>Vaccinations</div>
-                        <p>Nullam convallis, orci in congue aliquet, diam maturis cursus urna, id maximum lectus magna maximus.</p>
-                        <ButtonComponent class="bg_custom" text="LEARN MORE"/>
-                    </div>
-                    <div class="col">
-                        <div><font-awesome-icon class="icons" icon="fa-solid fa-graduation-cap" /></div>
-                        <div>Education</div>
-                        <p>Nullam convallis, orci in congue aliquet, diam maturis cursus urna, id maximum lectus magna maximus.</p>
-                        <ButtonComponent class="bg_custom" text="LEARN MORE"/>
-                    </div>
-                    <div class="col">
-                        <div><font-awesome-icon class="icons" icon="fa-solid fa-seedling" /></div>
-                        <div>Farming</div>
-                        <p>Nullam convallis, orci in congue aliquet, diam maturis cursus urna, id maximum lectus magna maximus.</p>
-                        <ButtonComponent class="bg_custom" text="LEARN MORE"/>
-                    </div>
+                    <ValuesComponent v-for="element in store.values" :text="element.icons" :title="element.title" :paragraph="element.text"/>
                 </div>
             </div>
         </div>
@@ -56,15 +40,9 @@ export default {
 @use '../assets/scss/partials/variables.scss' as *;
 
 
-.bg_custom{
-    background-color: $alternativeColor;
-    border: 4px solid $alternativeColor;
-}
-
-
-.bg_test{
+.bg_top{
     background-image: url('../assets/img/home-content-bg-2.jpg');
-    height: 200px;
+    height: 170px;
 }
 
 .img_slider{
@@ -73,13 +51,6 @@ export default {
     object-fit:cover;
 }
 
-.learn {
-    background-color: $alternativeColor;
-    a{
-        text-decoration: none;
-        color: white;
-    }
-}
 
 .padding_top{
     padding-top: 10rem;
@@ -94,10 +65,5 @@ export default {
     }
 }
 
-.icons{
-    font-size: 4rem;
-    color: $alternativeColor;
-    padding: 1rem;
-}
 
 </style>

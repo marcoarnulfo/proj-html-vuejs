@@ -23,15 +23,15 @@ export default {
             </div>
 
             <div class="links d-flex text-light gap-5 align-items-center">
-                <ButtonComponent :class="link.text == 'DONATE' ? 'donate' : 'normal_link'" v-for="link in store.links" :text="link.text"/>
+                <ButtonComponent :class="link.text == 'DONATE' ? 'donate' : link.text == 'HOME' ? 'custom_color normal_link' : 'normal_link'" v-for="link in store.links" :text="link.text"/>
             </div>
         </div>
         <div class="difference text-center text-light">
             <h1 class="bigger">MAKE A DIFFERENCE</h1>
             <p class="py-1">As long as poverty, injustice & inequality persist, none of us can truly rest</p>
             <div class="d-flex justify-content-center gap-5">
-                <ButtonComponent text="OUR MISSION"/>
-                <ButtonComponent class="custom_color" text="DONATE NOW"/>
+                <ButtonComponent class="mission" text="OUR MISSION"/>
+                <ButtonComponent class="donate_now" text="DONATE NOW"/>
             </div>
 
         </div>
@@ -63,13 +63,23 @@ h1{
 
 .normal_link{
     border: 0;
+    &:hover{
+        background-color: $alternativeColor;
+        box-shadow: 0 0 10px $grayText;
+    }
 }
 .donate {
     background-color: $alternativeColor;
     border: 4px solid $alternativeColor;
+    &:hover{
+        box-shadow: 0 0 5px $alternativeColor;
+    }
 }
 .custom_color{
     color: $alternativeColor;
+    &:hover{
+        color: white;
+    }
 }
 
 .difference {
@@ -81,13 +91,17 @@ h1{
     transform: translate(-50%, -50%);
 }
 
-a{
-    text-decoration: none;
-    color: white;
-}
+
 
 .donate_now{
     border: 3px solid;
     color: $alternativeColor;
+}
+
+.mission{
+    &:hover{
+        color: $alternativeColor;
+        box-shadow: 0 0 10px $alternativeColor;;
+    }
 }
 </style>

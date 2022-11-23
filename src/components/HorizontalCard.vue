@@ -35,9 +35,7 @@ export default {
         </div>
     </div>
 
-
 </template>
-
 
 <style lang="scss" scoped>
 
