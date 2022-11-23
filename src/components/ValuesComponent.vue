@@ -20,7 +20,7 @@ export default {
             <font-awesome-icon class="icons" :icon="text" />
         </div>
         <div>{{title}}</div>
-        <p>{{paragraph}}</p>
+        <p class="pb-3">{{paragraph}}</p>
         <ButtonComponent class="bg_custom" text="LEARN MORE" />
     </div>
 
